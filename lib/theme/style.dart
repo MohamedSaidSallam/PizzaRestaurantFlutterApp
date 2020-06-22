@@ -33,10 +33,17 @@ const normalTextStyle = TextStyle(
   color: accentColor,
 );
 
+const cardTitletStyle = TextStyle(
+  fontFamily: mainFont,
+  fontWeight: FontWeight.w700,
+  fontSize: 20.0,
+  color: accentColor,
+);
+
 const descTextStyle = TextStyle(
   fontFamily: monoFont,
   fontWeight: FontWeight.w300,
   fontStyle: FontStyle.italic,
-  fontSize: 2.0,
+  fontSize: 12.0,
   color: accentColor,
 );

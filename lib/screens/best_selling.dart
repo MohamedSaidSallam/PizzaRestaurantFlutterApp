@@ -34,7 +34,7 @@ class PizzaCardList extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 15.0),
       crossAxisSpacing: 15.0,
       mainAxisSpacing: 5.0,
-      childAspectRatio: 3/4, // item width / item height
+      childAspectRatio: 63/100, // item width / item height
       shrinkWrap: true,
       crossAxisCount: 2,
       children: getPizzaCards(),
@@ -92,7 +92,7 @@ class ViewAllButton extends StatelessWidget {
 }
 
 class PizzaCard extends StatelessWidget {
-  static const double descLeftPadding = 4.0;
+  static const double descLeftPadding = 5.0;
 
   const PizzaCard({
     Key key,
@@ -113,24 +113,30 @@ class PizzaCard extends StatelessWidget {
                 "assets/images/pepperoni-pizza.jpg",
                 fit: BoxFit.cover,
               ),
-              AutoSizeText(
-                "Awesome Pizza",
-                minFontSize: 10.0,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: style.normalTextStyle,
+              Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: AutoSizeText(
+                  "3 Cheese X 2 Toppings",
+                  minFontSize: 16.0,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: style.cardTitletStyle,
+                ),
               ),
               Padding(
-                padding: const EdgeInsets.all(descLeftPadding),
+                padding: const EdgeInsets.fromLTRB(descLeftPadding, 0.0, 1.0, 0.0),
                 child: AutoSizeText(
-                    // "Grilled Chicken",
-                    "Grilled Chicken, Tomato, Fresh Mushroom, Ranch Sauce",
-                    maxLines: 3,
+                    "Grilled Chicken, Tomato, Onions, Green Pepper, Fresh Mushroom, Jalapeno",
+                    minFontSize: 10.0,
+                    maxLines: 4,
                     overflow: TextOverflow.ellipsis,
                     style: style.descTextStyle),
               ),
+              Divider(
+                thickness: 0.7,
+              ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(descLeftPadding, 5.0, 0, 0),
+                padding: const EdgeInsets.fromLTRB(descLeftPadding, 5.0, 0.0, 0.0),
                 child: AutoSizeText(
                   "Starting at 50\$",
                   style: style.descTextStyle,
