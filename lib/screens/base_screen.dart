@@ -5,6 +5,9 @@ import 'package:pizza_restaurant/screens/scroll_to_top.dart';
 
 class Basescreen extends StatelessWidget {
   final ScrollController _scrollController = new ScrollController();
+
+  List<Widget> bodyItems;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,6 +17,8 @@ class Basescreen extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Header(),
+              ...?
+              bodyItems
             ],
           ),
         ),

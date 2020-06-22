@@ -6,15 +6,11 @@ import 'package:pizza_restaurant/screens/homescreen/promo.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget screen = Basescreen().build(context);
-    var columnChildren = ((((screen as Scaffold).body as SafeArea).child
-                as SingleChildScrollView)
-            .child as Column)
-        .children;
-    columnChildren.addAll(<Widget>[
-      Promo(),
-      BestSelling(),
-    ]);
-    return screen;
+    Basescreen screen = Basescreen()
+      ..bodyItems = <Widget>[
+        Promo(),
+        BestSelling(),
+      ];
+    return screen.build(context);
   }
 }
