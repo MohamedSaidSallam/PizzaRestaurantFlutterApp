@@ -85,6 +85,7 @@ flutter:
   fonts:
     - family: RobotoMono
       fonts:
+        - asset: assets/fonts/RobotoMono-Regular.ttf
         - asset: assets/fonts/RobotoMono-Light.ttf
           weight: 300
         - asset: assets/fonts/RobotoMono-LightItalic.ttf

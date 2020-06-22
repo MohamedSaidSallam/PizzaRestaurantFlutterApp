@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:pizza_restaurant/screens/food_item_details/food_item_details.dart';
 import 'package:pizza_restaurant/theme/style.dart' as style;
 
 class BestSelling extends StatelessWidget {
@@ -104,8 +105,9 @@ class PizzaCard extends StatelessWidget {
       elevation: 7.0,
       child: InkWell(
           splashColor: style.mainColor,
-          onTap: () => Scaffold.of(context)
-              .showSnackBar(SnackBar(content: Text("Pizza Card Clicked"))),
+          onTap: () => Navigator.push(context, MaterialPageRoute(
+            builder: (context) => FoodItemDetails(),
+          )),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[

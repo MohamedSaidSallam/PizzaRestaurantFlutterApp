@@ -47,3 +47,24 @@ const descTextStyle = TextStyle(
   fontSize: 12.0,
   color: accentColor,
 );
+
+const detailsTitleStyle = TextStyle(
+  fontFamily: mainFont,
+  fontWeight: FontWeight.w700,
+  fontSize: 32.0,
+  color: accentColor,
+);
+
+const detailsDescStyle = TextStyle(
+  fontFamily: monoFont,
+  fontWeight: FontWeight.w400,
+  fontSize: 20.0,
+  color: accentColor,
+);
+
+const sectionHeaderStyle = TextStyle(
+  fontFamily: mainFont,
+  fontWeight: FontWeight.w700,
+  fontSize: 20.0,
+  color: accentColor,
+);
