@@ -30,10 +30,13 @@ class CompanyTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        Image.asset(
-          "assets/icons/logo.png",
-          fit: BoxFit.cover,
-          height: 38.0,
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0.0, 0.0, 2.0, 0.0),
+          child: Image.asset(
+            "assets/icons/logo.png",
+            fit: BoxFit.cover,
+            height: 38.0,
+          ),
         ),
         Text(
           "Pizza Restaurant",
