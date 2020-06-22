@@ -7,19 +7,38 @@ class Header extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        HeaderIconButton(Icons.menu, 60.0, "Side Menu Button",
+        HeaderIconButton(Icons.menu, "Side Menu Button",
             () => Scaffold.of(context).openDrawer()),
+        CompanyTitle(),
+        HeaderIconButton(
+            Icons.shopping_cart,
+            "Shopping Cart Button",
+            () => Scaffold.of(context).showSnackBar(SnackBar(
+                  content: Text("WIP: Cart"),
+                ))),
+      ],
+    );
+  }
+}
+
+class CompanyTitle extends StatelessWidget {
+  const CompanyTitle({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        Image.asset(
+          "assets/icons/logo.png",
+          fit: BoxFit.cover,
+          height: 38.0,
+        ),
         Text(
           "Pizza Restaurant",
           style: style.titleTextStyle,
         ),
-        HeaderIconButton(
-            Icons.shopping_cart,
-            60.0,
-            "Shopping Cart Button",
-            () => Scaffold.of(context).showSnackBar(SnackBar(
-                  content: Text("Temp Msg"),
-                ))),
       ],
     );
   }
@@ -27,13 +46,11 @@ class Header extends StatelessWidget {
 
 class HeaderIconButton extends StatelessWidget {
   final IconData _icon;
-  final double _size;
   final String _semanticLabel;
   final void Function() _onIconTap;
 
   const HeaderIconButton(
     this._icon,
-    this._size,
     this._semanticLabel,
     this._onIconTap, {
     Key key,
@@ -47,7 +64,7 @@ class HeaderIconButton extends StatelessWidget {
         this._icon,
         color: style.accentColor,
         semanticLabel: this._semanticLabel,
-        size: this._size,
+        size: 60.0,
       ),
     );
   }

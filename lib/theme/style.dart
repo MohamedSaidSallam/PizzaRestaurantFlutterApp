@@ -15,7 +15,7 @@ ThemeData theme = ThemeData(
 const titleTextStyle = TextStyle(
   fontFamily: mainFont,
   fontWeight: FontWeight.w300,
-  fontSize: 30.0,
+  fontSize: 28.0,
   color: mainColor,
 );
 
