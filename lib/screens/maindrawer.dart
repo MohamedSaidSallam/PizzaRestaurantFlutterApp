@@ -41,18 +41,30 @@ class MainDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.local_pizza),
             title: Text('Pizza'),
+            onTap: () {
+              Navigator.pushNamed(context, '/Pizza');
+            },
           ),
           ListTile(
             leading: Icon(Icons.message),
             title: Text('Starters'),
+            onTap: () {
+              Navigator.pushNamed(context, '/Starters');
+            },
           ),
           ListTile(
             leading: Icon(Icons.message),
             title: Text('Salads'),
+            onTap: () {
+              Navigator.pushNamed(context, '/Salads');
+            },
           ),
           ListTile(
             leading: Icon(Icons.local_drink),
             title: Text('Drinks'),
+            onTap: () {
+              Navigator.pushNamed(context, '/Drinks');
+            },
           ),
           ListTile(
             leading: Icon(Icons.settings),
