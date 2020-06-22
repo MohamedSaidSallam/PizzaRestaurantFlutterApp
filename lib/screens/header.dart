@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:pizza_restaurant/theme/style.dart' as style;
 
 class Header extends StatelessWidget {
+  final bool inCart;
+
+  Header({Key key, this.inCart: false}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -10,12 +14,9 @@ class Header extends StatelessWidget {
         HeaderIconButton(Icons.menu, "Side Menu Button",
             () => Scaffold.of(context).openDrawer()),
         CompanyTitle(),
-        HeaderIconButton(
-            Icons.shopping_cart,
-            "Shopping Cart Button",
-            () => Scaffold.of(context).showSnackBar(SnackBar(
-                  content: Text("WIP: Cart"),
-                ))),
+        HeaderIconButton(Icons.shopping_cart, "Shopping Cart Button", () {
+          if (!inCart) Navigator.pushNamed(context, '/cart');
+        }, useMainColor: inCart),
       ],
     );
   }
@@ -52,12 +53,11 @@ class HeaderIconButton extends StatelessWidget {
   final String _semanticLabel;
   final void Function() _onIconTap;
 
-  const HeaderIconButton(
-    this._icon,
-    this._semanticLabel,
-    this._onIconTap, {
-    Key key,
-  }) : super(key: key);
+  final bool useMainColor;
+
+  const HeaderIconButton(this._icon, this._semanticLabel, this._onIconTap,
+      {Key key, this.useMainColor = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +65,7 @@ class HeaderIconButton extends StatelessWidget {
       onTap: this._onIconTap,
       child: Icon(
         this._icon,
-        color: style.accentColor,
+        color: this.useMainColor ? style.mainColor : style.accentColor,
         semanticLabel: this._semanticLabel,
         size: 60.0,
       ),

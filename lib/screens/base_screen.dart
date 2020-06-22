@@ -7,6 +7,7 @@ class Basescreen extends StatelessWidget {
   final ScrollController _scrollController = new ScrollController();
 
   List<Widget> bodyItems;
+  bool inCart = false;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class Basescreen extends StatelessWidget {
           controller: _scrollController,
           child: Column(
             children: <Widget>[
-              Header(),
+              Header(inCart: inCart),
               ...?
               bodyItems
             ],

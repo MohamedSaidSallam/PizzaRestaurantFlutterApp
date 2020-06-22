@@ -32,6 +32,13 @@ class MainDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
+            leading: Icon(Icons.home),
+            title: Text('Home'),
+            onTap: () {
+              Navigator.pushNamed(context, '/');
+            },
+          ),
+          ListTile(
             leading: Icon(Icons.local_pizza),
             title: Text('Pizza'),
           ),

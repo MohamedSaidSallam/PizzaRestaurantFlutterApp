@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pizza_restaurant/screens/cart/cart_screen.dart';
 import 'package:pizza_restaurant/screens/homescreen/homescreen.dart';
 import 'package:pizza_restaurant/theme/style.dart' as style;
 
@@ -12,7 +13,10 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Pizza Restaurant',
       theme: style.theme,
-      home: HomePage(),
+      routes: {
+        '/': (context) => HomePage(),
+        '/cart': (context) => CartScreen(),
+      },
     );
   }
 }
