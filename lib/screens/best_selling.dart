@@ -15,36 +15,51 @@ class BestSelling extends StatelessWidget {
             style: style.headerTextStyle,
           ),
         ),
-        GridView.count(
-          // primary: false,
-          scrollDirection: Axis.vertical,
-          padding: const EdgeInsets.all(20),
-          crossAxisSpacing: 20.0,
-          mainAxisSpacing: 5.0,
-          shrinkWrap: true,
-          crossAxisCount: 2,
-          children: <Widget>[
-            PizzaCard(),
-            PizzaCard(),
-            PizzaCard(),
-            PizzaCard(),
-            PizzaCard(),
-            PizzaCard(),
-            PizzaCard(),
-            PizzaCard(),
-            PizzaCard(),
-            PizzaCard(),
-            PizzaCard(),
-            PizzaCard(),
-            PizzaCard(),
-            PizzaCard(),
-            PizzaCard(),
-            PizzaCard(),
-          ],
-        ),
+        PizzaCardList(),
         ViewAllButton()
       ],
     );
+  }
+}
+
+class PizzaCardList extends StatelessWidget {
+  const PizzaCardList({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.count(
+      primary: false,
+      padding: const EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 15.0),
+      crossAxisSpacing: 15.0,
+      mainAxisSpacing: 5.0,
+      childAspectRatio: 3/4, // item width / item height
+      shrinkWrap: true,
+      crossAxisCount: 2,
+      children: getPizzaCards(),
+    );
+  }
+
+  List<Widget> getPizzaCards() {
+    return <Widget>[
+      PizzaCard(),
+      PizzaCard(),
+      PizzaCard(),
+      PizzaCard(),
+      PizzaCard(),
+      PizzaCard(),
+      PizzaCard(),
+      PizzaCard(),
+      PizzaCard(),
+      PizzaCard(),
+      PizzaCard(),
+      PizzaCard(),
+      PizzaCard(),
+      PizzaCard(),
+      PizzaCard(),
+      PizzaCard(),
+    ];
   }
 }
 
@@ -85,53 +100,43 @@ class PizzaCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // padding: const EdgeInsets.all(10.0),
-      height: 300.0,
-      width: double.maxFinite,
-      child: Card(
-        elevation: 7.0,
-        // padding: const EdgeInsets.all(8),
-        child: Container(
-          constraints: BoxConstraints(minHeight: 200.0),
-          child: InkWell(
-            splashColor: style.mainColor,
-            onTap: () => Scaffold.of(context)
-                .showSnackBar(SnackBar(content: Text("Pizza Card Clicked"))),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Image.asset(
-                  "assets/images/pepperoni-pizza.jpg",
-                  fit: BoxFit.cover,
+    return Card(
+      elevation: 7.0,
+      child: InkWell(
+          splashColor: style.mainColor,
+          onTap: () => Scaffold.of(context)
+              .showSnackBar(SnackBar(content: Text("Pizza Card Clicked"))),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Image.asset(
+                "assets/images/pepperoni-pizza.jpg",
+                fit: BoxFit.cover,
+              ),
+              AutoSizeText(
+                "Awesome Pizza",
+                minFontSize: 10.0,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: style.normalTextStyle,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(descLeftPadding),
+                child: AutoSizeText(
+                    // "Grilled Chicken",
+                    "Grilled Chicken, Tomato, Fresh Mushroom, Ranch Sauce",
+                    maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
+                    style: style.descTextStyle),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(descLeftPadding, 5.0, 0, 0),
+                child: AutoSizeText(
+                  "Starting at 50\$",
+                  style: style.descTextStyle,
                 ),
-                AutoSizeText(
-                  "Awesome Pizza",
-                  minFontSize: 10.0,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: style.normalTextStyle,
-                ),
-                // Padding(
-                //   padding: const EdgeInsets.all(descLeftPadding),
-                //   child: AutoSizeText(
-                //       "Grilled Chicken",
-                //       // "Grilled Chicken, Tomato, Fresh Mushroom, Ranch Sauce",
-                //       maxLines: 3,
-                //       overflow: TextOverflow.ellipsis,
-                //       style: style.descTextStyle),
-                // ),
-                Padding(
-                  padding:
-                      const EdgeInsets.fromLTRB(descLeftPadding, 5.0, 0, 0),
-                  child: AutoSizeText(
-                    "Starting at 50\$",
-                  ),
-                ),
-                // Text("Test"),
-              ],
-            ),
-          ),
+              ),
+            ],
         ),
       ),
     );
