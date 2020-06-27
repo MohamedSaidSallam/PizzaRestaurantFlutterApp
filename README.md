@@ -1,21 +1,43 @@
-# pizza_restaurant
+# Pizza Restaurant Flutter App
 
-A new Flutter project.
+<p align="center">
+  <img src="assets\icons\logo.png" alt="Logo" height="200" width="200"/>
+</p>
 
-## Getting Started
+[![License][license-image]][license-url]
+[![GitHub Release][github_release_badge]][github_release_link]
 
-This project is a starting point for a Flutter application.
+A simple app for a pizza restaurant. This app was mainly developed to try out and learn flutter.
 
-A few resources to get you started if this is your first Flutter project:
+The app can be downloaded from the releases tab.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Preview
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[![Pizza Restaurant Flutter App Preview Video](https://img.youtube.com/vi/tqwTJ57xfUs/0.jpg)](https://www.youtube.com/watch?v=tqwTJ57xfUs)
 
-### Logo
+## Built With
 
-- Shop: made by [becris](https://www.flaticon.com/authors/becris)
-- Pizza Slice: made by [DanielRT97](https://www.iconfinder.com/DanielRT97)
+* [VS Code](https://code.visualstudio.com/) - Editor
+* [Flutter](https://flutter.dev/) - Dev Kit
+* [Photopea](https://www.photopea.com/) - Image editor
+
+## Authors
+
+* **Mohamed Said** - [TheDigitalPhoenixX](https://github.com/TheDigitalPhoenixX)
+
+See also the list of [contributors](CONTRIBUTORS.md) who participated in this project.
+
+## Acknowledgments
+
+* [README.md Template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+
+### Logo assets
+
+* Shop: made by [becris](https://www.flaticon.com/authors/becris)
+* Pizza Slice: made by [DanielRT97](https://www.iconfinder.com/DanielRT97)
+
+[license-image]: https://img.shields.io/badge/License-MIT-brightgreen.svg
+[license-url]: https://opensource.org/licenses/MIT
+
+[github_release_badge]: https://img.shields.io/github/v/release/TheDigitalPhoenixX/PizzaRestaurantFlutterApp.svg?style=flat
+[github_release_link]: https://github.com/TheDigitalPhoenixX/PizzaRestaurantFlutterApp/releases
