@@ -39,5 +39,5 @@ See also the list of [contributors](CONTRIBUTORS.md) who participated in this pr
 [license-image]: https://img.shields.io/badge/License-MIT-brightgreen.svg
 [license-url]: https://opensource.org/licenses/MIT
 
-[github_release_badge]: https://img.shields.io/github/v/release/TheDigitalPhoenixX/PizzaRestaurantFlutterApp.svg?style=flat
+[github_release_badge]: https://img.shields.io/github/v/release/TheDigitalPhoenixX/PizzaRestaurantFlutterApp.svg?style=flat&include_prereleases
 [github_release_link]: https://github.com/TheDigitalPhoenixX/PizzaRestaurantFlutterApp/releases
