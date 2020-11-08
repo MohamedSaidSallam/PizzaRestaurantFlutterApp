@@ -11,7 +11,7 @@ A simple app for a pizza restaurant. This app was mainly developed to try out an
 
 The app can be downloaded from the releases tab.
 
-## Preview
+## Preview (Video)
 
 [![Pizza Restaurant Flutter App Preview Video](https://img.youtube.com/vi/tqwTJ57xfUs/0.jpg)](https://www.youtube.com/watch?v=tqwTJ57xfUs)
 
